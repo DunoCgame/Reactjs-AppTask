@@ -1,0 +1,55 @@
+
+.Section-New-Update{
+	display:flex;
+ justify-content: center;
+  align-items: center;
+	
+}
+
+.form-Task{
+	background:#336699;
+	width:500px;
+	height:auto;
+	/* display:flex; */
+	/* flex-direction:column; */
+	padding:10px;
+	
+}
+
+
+.container{
+
+		display:flex;
+	flex-direction:column;
+	padding:3px;
+}
+
+.container>input{
+	heigh:30px;
+	font-size:17px;
+	width:100%;
+	margin:2px;
+	
+}
+
+.container>textarea{
+	width:100%;
+	height:150px;
+	margin-bottom:10px;
+}
+.container>label{
+	font-size:15px;
+	color:white;
+	font-weight:bold;
+	
+}
+
+.btn-submit{
+	
+	font-size:16px;
+	color:white;
+	background:#60d408;
+	border-style:none;
+	padding:9px;
+	font-weight:bold;
+}

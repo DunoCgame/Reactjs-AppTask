@@ -1,0 +1,70 @@
+/******************Section Task************************/	
+.Section-Task{
+	
+	background:gray;
+	height:auto;
+	padding:5px;
+	display:grid;
+	grid-auto-flow:dense;
+	grid-auto-rows:12rem;
+	grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));
+	grid-column-gap:5px;
+	grid-row-gap:5px;
+  
+}
+
+
+.Containne_Task{
+	/* background:#00000052; */
+background:rgb(51, 102, 153);
+	border-radius:10px;
+	padding:10px;
+	border:1px solid white;
+	
+	display:flex;
+	flex-direction:column;
+	justify-content: space-around;
+
+}
+
+.Containner_Header_Task{
+	display:flex;
+	justify-content: space-between;
+	border-bottom:1px solid white;
+}
+.title_task{
+	color:white;
+	text-align:center;
+}
+.Subtitle_task{
+	color:white;
+	
+}
+.Text_task{
+	color:white;
+	padding:5px;
+
+}
+.containner-btn-task{
+	
+	
+	
+}
+
+.btn{
+	width:50%;
+	color:grey;
+	font-size:20px;
+	border-style:none;
+	
+}
+
+.Delete{
+	border-radius:0px 0px 0px 10px;
+	
+}
+.Update{
+	border-radius:0px 0px 10px 0px;
+	border-left:1px solid gray;
+	
+}

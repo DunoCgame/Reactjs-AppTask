@@ -1,0 +1,75 @@
+<div className="Containne_Task">
+	<hgroup>
+		<h2 className="title_task">title task</h2>
+		<p className="Subtitle_task">hhiihihi</p>
+	</hgroup>
+	<p className="Text_task">
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+		Lorem Ipsum has been the industry's standard dummy text ever since the 1500
+		s, when an unknown printer took a galley of type and scrambled it to make a type 
+		specimen book. It has survived not only five centuries, but also the leap into electronic 
+		typesetting, remaining essentially unchanged.
+	</p>
+	<button className="btn delete">delete</button>
+	<button className="btn  Update">Update</button>
+</div>
+
+ <NewUpdateTask/>
+ 
+ // PONER al recurso con id = 5 para cambiar el nombre de la tarea
+fetch ('https://jsonplaceholder.typicode.com/todos/5', {
+método: 'PUT',
+cuerpo: JSON.stringify ({
+	userId: 1,
+	id: 5,
+	título: "hola tarea",
+	completado: falso
+}),
+
+encabezados: {
+"Tipo de contenido": "aplicación / json; juego de caracteres = UTF-8 ”
+}
+})
+.entonces (respuesta => respuesta.json ())
+.entonces (json => console.log (json))
+
+
+							<Route path="/Task/:id" exact>
+								
+							</Route> 
+							
+							<Route path="/NewTask">
+								
+							</Route>
+				<h1>
+			{Data.id}
+			{Data.Title}
+			{Data.SubTitle}		
+			{Data.Text} 
+		</h1>					
+							
+							
+	
+		
+		
+
+		
+		<form className="form-login" onSubmit={handleSubmit}> 		
+			 <div className="container">
+				<label htmlFor="uname"><b>Title</b></label>
+				<input type="text" placeholder={Data.Title} name="title"  onChange={e => setTitle(e.target.value)} required />
+				<input type="text" placeholder={Data.SubTitle} name="subtitle"  onChange={e => setSubTitle(e.target.value)} required />						
+				<textarea placeholder={Data.Text} onChange={e => setText(e.target.value)} />
+				<button type="submit">Save</button>
+			 </div>
+		</form>
+		
+		
+		
+			
+				<label htmlFor="Data">Fecha</label>
+				<label htmlFor="Data">{date}</label>
+				
+				<label htmlFor="Data">Fecha</label>
+				<input type="date" data-date="" data-date-format="DD MMMM YYYY" value="2015-08-09">
+					
