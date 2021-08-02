@@ -8,41 +8,37 @@ function TaskPost(){
 	
 	const [error, setError] = useState(null);
 	const [Task, setTask] = useState([]);
-	
-	
 	let history = useHistory();
 	
-	
-	function Delete(id){
-		fetch('http://localhost:8080/Task/' + id, {
-		  method: 'DELETE',
-		})
-		.then(res =>  res.json()) // or  res.text())
-		.then(res => console.log(res))
-		console.log("Delete Task",id);
-	}
-
-
     const fetchData = async () => {
 		
-				const data = await fetch('http://localhost:8080/Task')
-				const Res = await data.json()
+		const data = await fetch('http://localhost:8080/Task')
+		const Res = await data.json()
+		
+		const limit = 6; //limite de datos
+		// setTask(Res.slice(0, limit))
+		setTask(Res)
 				
-				const limit = 6; //limite de datos
-				// setTask(Res.slice(0, limit))
-				setTask(Res)
     }
-	
+		
 		
 	React.useEffect(() => {
 			fetchData()
 			
 		},[])
-		
-	function activateLasers(id){
-		
-		console.log('You clicked submit.',id);
-	}
+	
+
+		async function Delete(id){
+				await fetch('http://localhost:8080/Task/'+id,{
+					method:'DELETE',
+				})
+				.then(res =>  res.json()) // or  res.text())
+				.then(res => console.log(res))
+				
+				console.log("Delete Task",id);
+				await fetchData();
+				
+			}	
   
 	return(
 
@@ -62,13 +58,16 @@ function TaskPost(){
 					
 					<div className="containner-btn-task">
 						<button className="btn Delete"
-							onClick={()=>{ 
-								console.log(item.id) 					
-								Delete(item.id); 
-							}}
+								onClick={()=>{
+													
+										Delete(item.id);
+										
+									
+								}}
 							>Borrar</button>
 						<button className="btn  Update" 				
-									onClick={()=>{ 
+									onClick={()=>{
+											
 											history.push("/UpdateTask/"+item.id);
 									
 									}} 	
